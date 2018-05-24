@@ -1,13 +1,9 @@
-// ==========================================
-// HEADER
-// ==========================================
-
-.template-index {
-  margin-top: -21px;
-}
-
 header {
-  background: #3dacac;
+  background: $celadon;
   height: 120px;
   width: 100%;
+
+  h1 {
+    font-family: 'Archivo Narrow', sans-serif;
+  }
 }

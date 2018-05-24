@@ -1,24 +1,25 @@
 @charset 'UTF-8';
 
 /**
- * Konquer BJJ | Built with Slate
+ * [replace with theme name] | Built with Slate
  */
 @import '~normalize.css/normalize';
 
+// Settings
+@import './variables';
+
 // Tools
-@import './tools/type';
-@import './tools/variables';
 @import './tools/mixins';
 @import './tools/functions';
 
 // Core
-@import './core/base';
 @import './core/forms';
 @import './core/helpers';
 @import './core/layout';
 @import './core/media';
 @import './core/responsive-tables';
 @import './core/rte';
+@import './core/typography';
 
 // Components
 @import './components/buttons';
@@ -32,7 +33,6 @@
 @import './sections/collection-list';
 @import './sections/featured-collection';
 @import './sections/image-with-text';
-@import './sections/header';
 
 // Templates
 @import './templates/gift_card';

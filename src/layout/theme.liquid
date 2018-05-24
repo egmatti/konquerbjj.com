@@ -6,6 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="{{ settings.color_accent }}">
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+  <style>
+
+    @font-face {
+    font-family: "Avenir Next Ultra Light";
+    src: url("{{ '../assets/fonts/avenir-next-ultra-light.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-ultra-light.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-ultra-light.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-ultra-light.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-ultra-light.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-ultra-light.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+    font-family: "Avenir Next Regular";
+    src: url("{{ '../assets/fonts/avenir-next-regular.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-regular.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-regular.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-regular.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-regular.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-regular.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+    font-family: "Avenir Next Medium";
+    src: url("{{ '../assets/fonts/avenir-next-medium.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-medium.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-medium.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-medium.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-medium.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-medium.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+    font-family: "Avenir Next Demi Bold";
+    src: url("{{ '../assets/fonts/avenir-next-demi-bold.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-demi-bold.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-demi-bold.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-demi-bold.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-demi-bold.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-demi-bold.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+    font-family: "Avenir Next Bold";
+    src: url("{{ '../assets/fonts/avenir-next-bold.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-bold.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-bold.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-bold.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-bold.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-bold.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+    @font-face {
+    font-family: "Avenir Next Heavy";
+    src: url("{{ '../assets/fonts/avenir-next-heavy.eot' | asset_url }}") format("eot"); /* IE9 Compat Modes */
+    src: url("{{ '../assets/fonts/avenir-next-heavy.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ '../assets/fonts/avenir-next-heavy.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-heavy.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
+        url("{{ '../assets/fonts/avenir-next-heavy.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-heavy.svg' | asset_url }}") format("svg"); /* Legacy iOS */
+    }
+
+  </style>
   <link rel="canonical" href="{{ canonical_url }}">
 
   {%- if settings.favicon != blank -%}
