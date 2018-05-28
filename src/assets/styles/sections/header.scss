@@ -1,9 +1,41 @@
 header {
-  background: $celadon;
+  background: $indigo;
   height: 120px;
   width: 100%;
+}
 
-  h1 {
-    font-family: 'Archivo Narrow', sans-serif;
+.main-nav--left ul {
+  align-items: center;
+  display: flex;
+  float: left;
+  justify-content: center;
+
+  li {
+    padding-right: 40px;
   }
+}
+
+.main-nav--left ul li, .main-nav--right ul li {
+  list-style-type: none;
+}
+
+.main-nav--left a, .main-nav--right a {
+  color: $white;
+  font-family: 'Avenir Next Demi Bold', sans-serif;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.search-form input {
+  display: none;
+}
+
+.main-nav--right path {
+  fill: $white;
+}
+
+.site-header__logo-image {
+
 }

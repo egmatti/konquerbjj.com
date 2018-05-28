@@ -1,0 +1,11 @@
+.hero-section {
+  background-image: url({{ 'hero-image.png' | asset_url }});
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 750px;
+  width: 100%;
+}
