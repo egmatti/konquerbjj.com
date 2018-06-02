@@ -6,6 +6,27 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  align-items: center;
+  display: flex;
   height: 750px;
+  position: relative;
+  top: -185px;
   width: 100%;
+  z-index: -100;
+}
+
+.hero-text {
+  margin-left: 150px;
+  width: 420px;
+
+  h1 {
+    color: $white;
+  }
+
+  p {
+    color: $white;
+    font-family: 'Avenir Next Medium', sans-serif;
+    font-size: 21.6px;
+    line-height: 29.7px;
+  }
 }
