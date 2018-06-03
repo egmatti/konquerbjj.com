@@ -26,95 +26,97 @@
   {%- endif -%}
 
   <header role="banner">
-    <a href="/" class="logo-image">
-      {% if section.settings.logo != blank %}
-        {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
-        <img src="{{ section.settings.logo | img_url: image_size }}"
-            srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
-            alt="{{ section.settings.logo.alt | default: shop.name }}">
-      {% else %}
-        {{ shop.name }}
-      {% endif %}
-    </a>
-
-    <div class="main-nav">
-      <nav class="main-nav--left" role="navigation">
-        <ul>
-          {% for link in linklists[section.settings.menu].links %}
-            {% if link.links != blank %}
-              <li>
-                <a href="{{ link.url }}">
-                  {{ link.title }}
-                  {% include 'icon-arrow-down' %}
-                </a>
-                <ul>
-                  {% for childlink in link.links %}
-                    <li>
-                      <a href="{{ childlink.url }}">
-                        {{ childlink.title }}
-                      </a>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </li>
-            {% else %}
-              <li>
-                <a href="{{ link.url }}">
-                  {{ link.title }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
-
-      <div class="main-nav--right">
-        <form class="search-form" action="/search" method="get" role="search">
-          <input type="search"
-            name="q"
-            id="Search"
-            value="{{ search.terms | escape }}"
-            placeholder="{{ 'general.search.placeholder' | t }}">
-
-          <button type="submit" class="search-button">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </form>
-
-        <a href="/cart">
-          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-          ({{ cart.item_count }})
-        </a>
-
-        {% if shop.customer_accounts_enabled %}
-          <ul>
-            {% if customer %}
-              <li>
-                {% if customer.first_name != blank %}
-                  {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
-                  {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
-                {% else %}
-                  <a href="/account">{{ 'layout.customer.account' | t }}</a>
-                {% endif %}
-              </li>
-              <li>
-                {{ 'layout.customer.log_out' | t | customer_logout_link }}
-              </li>
-            {% else %}
-              <li>
-                {{ 'layout.customer.log_in' | t | customer_login_link }}
-              </li>
-              <li>
-                {{ 'layout.customer.create_account' | t | customer_register_link }}
-              </li>
-            {% endif %}
-          </ul>
+    <div class="header-wrapper">
+      <a href="/" class="logo-image">
+        {% if section.settings.logo != blank %}
+          {% capture image_size %}{{ section.settings.logo_max_width }}x{% endcapture %}
+          <img src="{{ section.settings.logo | img_url: image_size }}"
+              srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+              alt="{{ section.settings.logo.alt | default: shop.name }}">
+        {% else %}
+          {{ shop.name }}
         {% endif %}
+      </a>
 
-        <a>Login</a>
+      <div class="main-nav">
+        <nav class="main-nav--left" role="navigation">
+          <ul>
+            {% for link in linklists[section.settings.menu].links %}
+              {% if link.links != blank %}
+                <li>
+                  <a href="{{ link.url }}">
+                    {{ link.title }}
+                    {% include 'icon-arrow-down' %}
+                  </a>
+                  <ul>
+                    {% for childlink in link.links %}
+                      <li>
+                        <a href="{{ childlink.url }}">
+                          {{ childlink.title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                <li>
+                  <a href="{{ link.url }}">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
 
+        <div class="main-nav--right">
+          <form class="search-form" action="/search" method="get" role="search">
+            <input type="search"
+              name="q"
+              id="Search"
+              value="{{ search.terms | escape }}"
+              placeholder="{{ 'general.search.placeholder' | t }}">
+
+            <button type="submit" class="search-button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </form>
+
+          <a href="/cart">
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            ({{ cart.item_count }})
+          </a>
+
+          {% if shop.customer_accounts_enabled %}
+            <ul>
+              {% if customer %}
+                <li>
+                  {% if customer.first_name != blank %}
+                    {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+                    {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+                  {% else %}
+                    <a href="/account">{{ 'layout.customer.account' | t }}</a>
+                  {% endif %}
+                </li>
+                <li>
+                  {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                </li>
+              {% else %}
+                <li>
+                  {{ 'layout.customer.log_in' | t | customer_login_link }}
+                </li>
+                <li>
+                  {{ 'layout.customer.create_account' | t | customer_register_link }}
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+
+          <a>Login</a>
+
+        </div>
       </div>
     </div>
   </header>

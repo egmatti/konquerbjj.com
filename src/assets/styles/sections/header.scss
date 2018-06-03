@@ -3,18 +3,25 @@ header {
   width: 100%;
 }
 
+.header-wrapper {
+  height: 120px;
+  margin: 0 auto;
+  width: 90%;
+}
+
 .logo-image {
   margin: 0 auto;
-  padding-top: 15px;
+  padding-top: 7px;
   text-align: center;
+  transform: scale(0.95);
 }
 
 .main-nav--left {
-  transform: translateY(-87.5px);
+  transform: translateY(-82px);
 }
 
 .main-nav--right {
-  transform: translateY(-75px);
+  transform: translateY(-68px);
 }
 
 .main-nav--left ul {
@@ -22,6 +29,7 @@ header {
   display: flex;
   float: left;
   justify-content: center;
+  -webkit-padding-start: 0;
 
   li {
     padding-right: 40px;
@@ -33,7 +41,6 @@ header {
   display: flex;
   float: right;
   justify-content: center;
-  padding-right: 40px;
 
   > * {
     padding-left: 40px;
@@ -63,5 +70,5 @@ header {
 
 .main-nav--right .fa {
   color: $white;
-  font-size: 24px;
+  font-size: 22px;
 }

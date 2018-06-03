@@ -6,17 +6,27 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  align-items: center;
-  display: flex;
-  height: 750px;
+  height: 85vh;
   position: relative;
-  top: -185px;
+  top: -120px;
   width: 100%;
   z-index: -100;
 }
 
+.hero-wrapper {
+  align-items: center;
+  display: flex;
+  height: -webkit-calc(100% - 120px);
+  height:   -moz-calc(100% -120px);
+  height:     calc(100% - 120px);
+  position: relative;
+  top: 68px;
+  width: 100%;
+}
+
 .hero-text {
-  margin-left: 150px;
+  margin-left: 10%;
+  margin-bottom: 24px;
   width: 420px;
 
   h1 {
@@ -26,7 +36,26 @@
   p {
     color: $white;
     font-family: 'Avenir Next Medium', sans-serif;
-    font-size: 21.6px;
-    line-height: 29.7px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 44px;
+  }
+}
+
+.hero-button {
+  border: 3px solid $white;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  color: $white;
+  font-family: 'Avenir Next Demi Bold', sans-serif;
+  font-size: 18px;
+  letter-spacing: 2.25px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+
+  :hover {
+    cursor: pointer;
   }
 }
