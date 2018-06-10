@@ -11,10 +11,26 @@
 {{ content_for_index }}
 
 <section class="about-section">
+  <img class="about-accent--left" src="{{ "accent-left.png" | asset_url }}">
+  <img class="about-accent--right" src="{{ "accent-right.png" | asset_url }}">
   <div class="about-frame">
     <div class="about-text">
       <h3>About Konquer Jiu Jitsu</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
     </div>
+  </div>
+</section>
+
+<section class="email-sign-up-section">
+  <div class="email-sign-up-wrapper">
+    <div class="email-sign-up-text">
+      <h2>Be in the Know-Gi</h2>
+      <img class="email-sign-up-accent" src="{{ "flower.png" | asset_url }}">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+    </div>
+    <form>
+      <input placeholder="Enter your email address"></input>
+      <a class="button submit-button">Submit</a>
+    </form>
   </div>
 </section>

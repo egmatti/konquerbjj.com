@@ -1,4 +1,5 @@
 h1 {
+  color: $black;
   font-family: 'Archivo Narrow', sans-serif;
   font-size: 60px;
   font-weight: bold;
@@ -6,8 +7,28 @@ h1 {
   margin-top: 0;
 }
 
+h2 {
+  color: $black;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+h3 {
+  color: $black;
+  font-family: 'Avenir Next Demi Bold', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 p {
+  color: rgba($black, 0.75);
   font-family: 'Avenir Next Regular', sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
   margin: 0;
 }

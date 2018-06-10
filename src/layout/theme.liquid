@@ -38,7 +38,7 @@
     src: url("{{ '../assets/fonts/avenir-next-medium.eot?#iefix' | asset_url }}") format("embedded-opentype"), /* IE6-IE8 */
         url("{{ '../assets/fonts/avenir-next-medium.woff2' | asset_url }}") format("woff2"), /* Super Modern Browsers */
         url("{{ '../assets/fonts/avenir-next-medium.woff' | asset_url }}") format("woff"), /* Pretty Modern Browsers */
-        url("{{ '../assets/fonts/avenir-next-medium.ttf' | asset_url }}") format("truetype"), /* Safari, Android, iOS */
+        url("{{ '../assets/fonts/avenir-next-medium.ttf' _url }}") format("truetype"), /* Safari, Android, iOS */
         url("{{ '../assets/fonts/avenir-next-medium.svg' | asset_url }}") format("svg"); /* Legacy iOS */
         @media screen and (-webkit-min-device-pixel-ratio:0) {@font-face {font-family: 'Avenir Next Medium'; src: url("{{ '../assets/fonts/avenir-next-medium.svg' | asset_url }}") format('svg');}}
     }
