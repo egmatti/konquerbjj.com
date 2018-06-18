@@ -1,0 +1,64 @@
+.footer-nav {
+  align-items: start;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin: 0 10%;
+  padding: 50px 0px;
+  width: 80%;
+}
+
+.footer-nav--customer-care, .footer-nav--information, .footer-nav--information {
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+}
+
+.customer-care-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+footer ul {
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-padding-start: 0;
+
+  li {
+    align-self: start;
+    list-style-type: none;
+
+    a {
+      color: rgba($black, 0.75);
+      font-family: 'Avenir Next Regular', sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 45px;
+      text-decoration: none;
+    }
+  }
+}
+
+hr {
+  background: rgba($blue-gray, 0.3);
+  border-bottom-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  color: rgba($blue-gray, 0.3);
+  height: 4px;
+}
+
+.subfooter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+  padding: 10px 0;
+  width: 80%;
+}
+
+small a {
+  color: rgba($black, 0.75);
+  text-decoration: none;
+}
